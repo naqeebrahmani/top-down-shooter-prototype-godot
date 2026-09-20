@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://cgyfrlrdsliiv" path="res://scenes/player.tscn" id="1_o5qli"]
 [ext_resource type="PackedScene" uid="uid://cfaew26ts68kx" path="res://scenes/bullet.tscn" id="2_sugp2"]
 [ext_resource type="PackedScene" uid="uid://v4ml6qx1qa3c" path="res://scenes/enemy.tscn" id="3_jyhfs"]
-[ext_resource type="AudioStream" uid="uid://jxsqqjax8ahd" path="res://assets/freesound_community-huge-explosion-87823.mp3" id="5_tbgi4"]
+[ext_resource type="AudioStream" uid="uid://d4gr6urtv5ucg" path="res://assets/eaglaxle-gun-shot-1-530788.mp3" id="5_tbgi4"]
 
 [sub_resource type="Curve2D" id="Curve2D_4utro"]
 _data = {
@@ -16,6 +16,13 @@ point_count = 5
 script = ExtResource("1_0wfyh")
 bulletScene = ExtResource("2_sugp2")
 enemyScene = ExtResource("3_jyhfs")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=759845078]
+z_index = -3
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(29.021875, 16.199995)
+color = Color(0.90551, 0.9771033, 0.99708146, 1)
 
 [node name="Player" parent="." unique_id=1849218789 instance=ExtResource("1_o5qli")]
 position = Vector2(558, 319)
@@ -31,6 +38,7 @@ curve = SubResource("Curve2D_4utro")
 [node name="EnemySpawn" type="PathFollow2D" parent="EnemyPath" unique_id=241072901]
 
 [node name="EnemySpawnDelay" type="Timer" parent="EnemyPath" unique_id=674532909]
+wait_time = 0.5
 autostart = true
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1023073863]

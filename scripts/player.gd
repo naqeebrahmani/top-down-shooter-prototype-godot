@@ -17,10 +17,11 @@ func faceMouse() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	faceMouse()	
+	faceMouse()
 	
-	if Input.is_action_just_pressed("Shoot"):
-		emit_signal("shoot")
+	if visible: 	
+		if Input.is_action_just_pressed("Shoot"):
+			emit_signal("shoot")
 	
 		
 		
