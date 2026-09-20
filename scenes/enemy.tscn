@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://v4ml6qx1qa3c"]
+
+[ext_resource type="Texture2D" uid="uid://cjlrgmhvw6dtm" path="res://assets/fih.png" id="1_7p1mj"]
+[ext_resource type="Script" uid="uid://dgm7m0qe8qosu" path="res://scripts/enemy.gd" id="1_md0e3"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4g0s1"]
+radius = 4.0
+height = 14.0
+
+[node name="RigidBody2D" type="Area2D" unique_id=576441634]
+texture_filter = 1
+rotation = 1.5707964
+collision_mask = 2
+script = ExtResource("1_md0e3")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1952842516]
+scale = Vector2(3.840001, 3.840001)
+texture = ExtResource("1_7p1mj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1747689674]
+position = Vector2(1, 0)
+rotation = -1.5707964
+scale = Vector2(4.2400007, 4.2400007)
+shape = SubResource("CapsuleShape2D_4g0s1")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
