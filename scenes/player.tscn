@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://7jpt6533hqsl" path="res://scripts/player.gd" id="1_g2els"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4g0s1"]
-radius = 4.4552693
+radius = 4.978405
 height = 12.0
 
 [node name="Player" type="Area2D" unique_id=1849218789]
@@ -15,6 +15,6 @@ texture_filter = 1
 texture = ExtResource("1_3vyb7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1050480383]
-position = Vector2(2.0000002, -3)
+position = Vector2(1.9999999, -3)
 rotation = -0.5505259
 shape = SubResource("CapsuleShape2D_4g0s1")

@@ -20,8 +20,8 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	var scoreText: String = "Score:  "[score]
-	print(scoreText)
+	
+	print("score: " + str(score)) #this line is for testing#
 	
 	deltaTime = delta
 	
@@ -80,7 +80,7 @@ func _on_player_shoot() -> void:
 func gameOver() -> void: 
 	$Player.hide() #hide the player because it got hit
 	
-	get_tree().reload_current_scene()
+	get_tree().reload_current_scene.call_deferred()
 
 func _on_player_area_entered(area: Area2D) -> void:
 	gameOver()

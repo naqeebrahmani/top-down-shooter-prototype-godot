@@ -18,5 +18,6 @@ func _on_body_entered(body: Node) -> void:
 	
 	get_parent().score += 1
 	
-	queue_free()
-	body.queue_free()
+	queue_free.call_deferred()
+
+	body.queue_free.call_deferred()
