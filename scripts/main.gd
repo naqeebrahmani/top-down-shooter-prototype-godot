@@ -21,8 +21,12 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	
-	print("score: " + str(score)) #this line is for testing#
 	
+	#displaying the score#
+	
+	$ScoreLabel.text = "Score: " + str(score)
+	
+	#####################
 	deltaTime = delta
 	
 	var viewportRectOffset: float = 100
